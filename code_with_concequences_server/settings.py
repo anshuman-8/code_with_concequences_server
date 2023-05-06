@@ -31,7 +31,8 @@ AUTH_USER_MODEL = "blank_funds.User"
 
 INSTALLED_APPS = [
     'blank_funds',
-    'rest_framework',
+    'corsheaders',
+    # 'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
