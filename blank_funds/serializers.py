@@ -6,7 +6,7 @@ from rest_framework import serializers
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User
-        fields = ['url', 'username', 'email', 'groups']
+        fields = ['id','url', 'username', 'email', 'groups']
 
 
 class GroupSerializer(serializers.HyperlinkedModelSerializer):
@@ -17,14 +17,14 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
 class OrganisationSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Organisation
-        fields = ['name', 'location', 'about', 'image', 'social', 'funds_required', 'funds_raised']
+        fields = ['id','name', 'location', 'about', 'image', 'social', 'funds_required', 'funds_raised']
 
 class PaymentSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Payment
-        fields = ['user', 'organisation', 'amount', 'date', 'payment_id']
+        fields = ['id','donor_name','donor_email', 'organisation', 'mode','message', 'date', 'payment_id']
 
 class SocialSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Social
-        fields = ['name', 'link']
+        fields = ['phone', 'email']

@@ -24,9 +24,13 @@ class Organisation(models.Model):
 
 
 class Payment(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    # user = models.ForeignKey(User, on_delete=models.CASCADE)
+    donor_name = models.CharField(max_length=100, null=True, blank=True)
+    donor_email = models.CharField(max_length=100, null=True, blank=True)
     organisation = models.ForeignKey(Organisation, on_delete=models.CASCADE)
-    amount = models.IntegerField()
+    # amount = models.IntegerField()
+    message = models.TextField(default="")
+    mode = models.CharField(max_length=100, null=True, blank=True)
     date = models.DateTimeField(auto_now_add=True)
     payment_id = models.CharField(max_length=100, null=True, blank=True)
 
