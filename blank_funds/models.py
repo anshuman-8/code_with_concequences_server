@@ -32,8 +32,8 @@ class Payment(models.Model):
 
 
 class Social(models.Model):
-    name = models.CharField(max_length=100, unique=True)
-    link = models.CharField(max_length=100, unique=True)
+    phone = models.CharField(max_length=100, unique=True)
+    email = models.CharField(max_length=100, unique=True)
     
 
 

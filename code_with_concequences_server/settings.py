@@ -6,10 +6,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '&$-s(1p6yc3jn#h#o2@+=dgbwer^kh=^mh3lgg-%&5dv0o8$-z'
 
+ALLOWED_HOSTS = ['*']
+
+CORS_ORIGIN_WHITELIST = [
+    "http://localhost:3000",
+]
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
-ALLOWED_HOSTS = []
 
 AUTH_USER_MODEL = "blank_funds.User"
 
@@ -26,6 +30,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
+    "django.middleware.common.CommonMiddleware",
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
