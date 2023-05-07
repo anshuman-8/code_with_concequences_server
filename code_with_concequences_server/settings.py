@@ -10,6 +10,8 @@ ALLOWED_HOSTS = ['*']
 
 CORS_ORIGIN_WHITELIST = [
     "http://localhost:3000",
+    "http://13.126.193.231:3000"
+
 ]
 
 # SECURITY WARNING: don't run with debug turned on in production!
