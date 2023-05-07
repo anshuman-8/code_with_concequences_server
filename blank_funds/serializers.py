@@ -17,7 +17,7 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
 class OrganisationSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Organisation
-        fields = ['id','name', 'location', 'about', 'image', 'social', 'funds_required', 'funds_raised']
+        fields = ['id','name', 'location', 'about', 'image', 'funds_required', 'funds_raised', 'phone', 'email']
 
 class PaymentSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
