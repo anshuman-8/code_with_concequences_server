@@ -8,11 +8,7 @@ SECRET_KEY = '&$-s(1p6yc3jn#h#o2@+=dgbwer^kh=^mh3lgg-%&5dv0o8$-z'
 
 ALLOWED_HOSTS = ['*']
 
-CORS_ORIGIN_WHITELIST = [
-    "http://localhost:3000",
-    "http://13.126.193.231:3000"
-
-]
+CORS_ORIGIN_WHITELIST = ['*']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
